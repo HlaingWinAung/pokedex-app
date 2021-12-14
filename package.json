@@ -1,21 +1,21 @@
-{
+{ 
+  "homepage": "https://HlaingWinAung.github.io/pokedex-app",
   "name": "pokemon",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://hlaingwinaung.github.io/pokedex-app/",
   "dependencies": {
-    "gh-pages": "^3.2.3",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.3"
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
-    "build": "SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "prepare": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
+  
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -25,5 +25,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
+  }
 }
